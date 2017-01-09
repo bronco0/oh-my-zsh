@@ -25,7 +25,8 @@
 
 local green="%{$fg_bold[green]%}"
 local red="%{$fg_bold[red]%}"
-local cyan="%{$fg_bold[cyan]%}"
+local cyan="%{$fg[cyan]%}"
+local cyan_b="%{$fg_bold[cyan]%}"
 local yellow="%{$fg_bold[yellow]%}"
 local blue="%{$fg_bold[blue]%}"
 local magenta="%{$fg_bold[magenta]%}"
