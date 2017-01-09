@@ -42,7 +42,7 @@ local hostname_root_color=$red
 for i in `hostname`; local hostname_normal_color=$color_array[$[((#i))%7+1]]
 local hostname_color=%(!.$hostname_root_color.$hostname_normal_color)
 
-local current_dir_color=$blue
+local current_dir_color=$cyan
 local username_command="%n"
 local current_dir="%~"
 local time="%*"
