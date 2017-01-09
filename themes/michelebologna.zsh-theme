@@ -57,7 +57,7 @@ local jobs_bg="${red}fg: %j$reset"
 local last_command_output="%(?.%(!.$red.$green).$yellow)"
 local time_output="[$yellow$time$reset]"
 
-ZSH_THEME_GIT_PROMPT_PREFIX=""
+ZSH_THEME_GIT_PROMPT_PREFIX=" \uE0A0 "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 ZSH_THEME_GIT_PROMPT_DIRTY=""
 ZSH_THEME_GIT_PROMPT_CLEAN=""
