@@ -48,12 +48,14 @@ local current_dir_color=$blue
 local username_command="%n"
 local hostname_command="%m"
 local current_dir="%~"
+local time="%*"
 
 local username_output="%(!..$username_normal_color$username_command$reset@)"
 local hostname_output="$hostname_color$hostname_command$reset"
 local current_dir_output="$current_dir_color$current_dir$reset"
 local jobs_bg="${red}fg: %j$reset"
 local last_command_output="%(?.%(!.$red.$green).$yellow)"
+local time_output="[$yellow$time$reset]"
 
 ZSH_THEME_GIT_PROMPT_PREFIX=""
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
@@ -68,7 +70,7 @@ ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=">"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="<"
 ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="$red<>"
 
-PROMPT='$username_output$hostname_output:$current_dir_output%1(j. [$jobs_bg].)'
+PROMPT='$time_output$username_output$hostname_output:$current_dir_output%1(j. [$jobs_bg].)'
 GIT_PROMPT='$(out=$(git_prompt_info)$(git_prompt_status)$(git_remote_status);if [[ -n $out ]]; then printf %s " $white($green$out$white)$reset";fi)'
 PROMPT+="$GIT_PROMPT"
 PROMPT+=" $last_command_output%#$reset "
